@@ -1,16 +1,24 @@
 # Tetris
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
+A simple Tetris game inspired and roughly based on the work of [Michael Karén](https://github.com/melcor76) which is built on [Angular](https://angular.io).
 
-## Development server
+Upcoming Features:
+* Sounds for clearing lines and winning levels
+* Some nice tunes
+* Ability to toggle sound on and off
+* Storing the highscore on the server
+
+
+## Getting started
+
+To start playing the game,
+
+Make sure you have the [Angular CLI](https://github.com/angular/angular-cli#installation) installed globally. We use [Yarn](https://yarnpkg.com) to manage the dependencies, so we strongly recommend you to use it. you can install it from [Here](https://yarnpkg.com/en/docs/install), then run `yarn install` to resolve all dependencies (might take a minute).
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
+### Building the project
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
