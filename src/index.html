@@ -1,13 +1,89 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Tetris</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Tetris</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="ng-tetris" />
+    <meta name="description" content="Simple Tetris game made with Angular.">
+    <meta name="twitter:description" content="Simple Tetris game made with
+      Angular.">
+    <meta
+      property="og:image"
+      content="https://focused-mestorf-930f82.netlify.com/assets/share-image.png"
+      />
+    <meta property="og:image:alt" content="Share image for social media" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@melcor76" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
+
+        <!-- inline spinner styles to be able to display spinner right away -->
+        <style type="text/css">
+          body, html {
+            height: 100%;
+          }
+          .app-loading {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+          }
+    
+          .app-loading .spinner {
+            height: 200px;
+            width: 200px;
+            animation: rotate 2s linear infinite;
+            transform-origin: center center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+    
+          .app-loading .spinner .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            animation: dash 1.5s ease-in-out infinite;
+            stroke-linecap: round;
+            stroke: #ddd;
+          }
+    
+          @keyframes rotate {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+    
+          @keyframes dash {
+            0% {
+              stroke-dasharray: 1, 200;
+              stroke-dashoffset: 0;
+            }
+            50% {
+              stroke-dasharray: 89, 200;
+              stroke-dashoffset: -35px;
+            }
+            100% {
+              stroke-dasharray: 89, 200;
+              stroke-dashoffset: -124px;
+            }
+          }
+        </style>
+  </head>
+  <body>
+    <app-root></app-root>
+    <!-- loading layout replaced by app after startupp -->
+    <div class="app-loading">
+      <div class="loading">
+        <p>loading</p>
+              <span></span>
+        </div>
+    </div>
+  </body>
 </html>
